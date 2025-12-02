@@ -9,9 +9,11 @@ export default function Home() {
                     GitHub OAuth
                 </Typography>
                 <form
-                    action={async () => {
+                    // want to declare that it is a server function, so have to do "use server"
+                    // use the redirectTo param to go to profile page if successful login
+                    action={ async () => {
                         "use server";
-                        await signIn("github", {redirectTo: "/profile" });
+                        await signIn("github", { redirectTo: "/profile" });
                     }}
                 >
                     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
