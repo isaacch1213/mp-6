@@ -13,7 +13,7 @@ export default async function Page() {
         <Box sx={{ width: "100vw", height: "90vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
             <Paper elevation={3} sx={{ width: "65%", height: "60%", marginBottom: "5%", display: "flex", flexDirection: "column", gap: "1%", justifyContent: "center", alignItems: "center" }}>
                 <Typography variant="h4" component="h4" sx={{ marginBottom: "1%" }}>
-                        Profile
+                        Your GitHub Profile:
                 </Typography>
                 {/* use nullish coalescing operator to check if value on left is null or undefined and if so use the value on the right*/}
                 <img src={session.user?.image ?? ""} alt={`${session.user?.name} Profile Picture`} className="w-[20%]"/>
